@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="date"],
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #007A99;
+        }
+    </style>
+</head>
+<body>
+    <h1>Order Form</h1>
+    <form method="POST" action="/order-form">
+        <label for="order_date">Order Date:</label>
+        <input type="date" name="order_date" id="order_date" required><br>
+
+        <label for="company">Company:</label>
+        <input type="text" name="company" id="company" value="{{ company }}" readonly><br>
+
+        <label for="order_owner">Order Owner:</label>
+        <input type="text" name="order_owner" id="order_owner" value="{{ owner }}" readonly><br>
+
+        <label for="item">Item/Product:</label>
+        <input type="text" name="item" id="item" required><br>
+
+        <label for="ea_count">EA / Count:</label>
+        <input type="text" name="ea_count" id="ea_count" required><br>
+
+        <label for="weight">Weight:</label>
+        <input type="text" name="weight" id="weight" required><br>
+
+        <label for="requests">Requests:</label>
+        <input type="text" name="requests" id="requests" required><br>
+
+        <input type="submit" value="Submit Order">
+    </form>
+    <button onclick="location.href='/view_orders'">View Orders</button>
+</body>
+</html>
