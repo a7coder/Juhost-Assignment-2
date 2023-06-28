@@ -1,2 +1,2 @@
 Flask
-mysql_connector_repackaged
+mysql-connector-python
