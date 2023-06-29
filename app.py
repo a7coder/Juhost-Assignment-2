@@ -7,10 +7,10 @@ app = Flask(__name__)
 app.secret_key ='InternA7coder'
 # MySQL connection configuration
 mysql = mysql.connector.connect(
-    host="sql12.freemysqlhosting.net",
-    user="sql12629011",
-    password="RzlzHmeUy8",
-    database="sql12629011",
+    host="db4free.net",
+    user="juhosi",
+    password="juhosi123",
+    database="juhosi",
     port=3306
    
 )
